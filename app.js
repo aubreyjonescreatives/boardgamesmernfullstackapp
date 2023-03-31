@@ -1,11 +1,9 @@
 import express from "express"; 
 import path from 'path'
 import helmet from 'helmet'
-import multer from "multer"; 
+import bodyParser from "body-parser";
 import morgan from "morgan";
-import compression from 'compression'
 import { fileURLToPath } from "url";
-//import bodyParser from 'body-parser'
 import { apiRouter} from './routes/api.route.js'
 import { crazygameRouter} from './routes/crazygame.route.js'
 import { populargameRouter } from './routes/populargame.route.js'
@@ -21,24 +19,21 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename); 
 
 
-
+app.use(express.json())
+app.use(helmet({ contentSecurityPolicy: false, crossOriginResourcePolicy: false, crossOriginEmbedderPolicy: false })); 
+app.use(morgan("common")); 
+app.use(bodyParser.json({ limit: "30mb", extended: true })); 
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}));
 
 
 //const port = process.env.PORT || 8080
 
 
-app.use(cors())
-
-app.use(express.urlencoded({extended: true}))
-
-app.use(express.json())
-
-app.use(helmet())
-
-app.use(compression())
-
 
 // lets just forget about CORS
+
+app.use(cors())
+
 
 app.use(cors({
     origin: '*',
@@ -63,15 +58,23 @@ if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging')
         res.sendFile(path.join(__dirname + '/client/build/index.html'));
     });
 }
+
+// SOME COOL ROUTES
+
+
 app.use('/api', apiRouter)
 
 app.use('/populargame', populargameRouter)
 
 app.use('/crazygame', crazygameRouter)
 
+
 app.use((req, res, next) => {
     res.status(404).send('<h1>Page Not Found</h1>')
 })
+
+
+// mongoDB connection
 
 const PORT = process.env.PORT || 8080
 
