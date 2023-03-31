@@ -1,0 +1,101 @@
+
+header, nav, main, footer {max-width: 100rem; font-family: "lato";}
+
+
+
+
+
+
+/* ------------------------HEADER----------------------------- */
+
+
+
+
+/* ------------------------NAV----------------------------- */
+
+
+.nav-container {
+    width: 100%; 
+}
+
+
+/*-------------------- MAIN ------------------------------ */
+
+
+main {
+ 
+
+//div.lead { grid-row: 1 / span 2; grid-column: 1} 
+//div.secondTop { grid-row: 1; grid-column: 2; align-self: start;}      
+//div.secondBot { grid-row: 2; grid-column: 2; align-self:end;}  
+    
+    
+    
+     
+        
+        
+      
+    
+    
+
+/*----------------Column Layout -------------*/
+
+
+
+//@for $i from 1 through 12 {
+//    $w: ($i / 12) * 100%;
+//    .medium-#{$i} {width: $w; float: left;}
+    
+//}
+
+    
+    
+    
+    
+  
+    
+  
+    
+}
+
+
+
+
+/*----------------FOOTER--------------------
+
+
+footer {
+    grid-template-columns: 1fr 1fr;
+    
+  
+    
+ p {
+     text-align: center;   
+     grid-column: 1 / span 2;  
+    }
+         
+    
+    
+   
+div.apple { grid-row: 1; grid-column: 1; align-self: start; } 
+div.pear { grid-row: 1; grid-column: 2;}     
+div.banana { grid-row: 2; grid-column: 1; }  
+div.plum { grid-row: 2; grid-column: 2; }        
+    
+ 
+    
+}    
+
+
+
+div#wrapperFooter {
+    clear: both; 
+    background-color: $primaryColor;
+}
+
+
+
+
+
+    
+----------------END FOOTER--------------------*/

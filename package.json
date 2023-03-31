@@ -1,0 +1,38 @@
+{
+  "name": "boardgamesmernfullstackapp",
+  "version": "1.0.0",
+  "description": "Welcome to a board games CRUD app!",
+  "main": "app.js",
+  "dependencies": {
+    "@apollo/client": "^3.3.15",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.6.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "gitignore": "^0.7.0",
+    "helmet": "^4.5.0",
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
+    "mongoose": "^5.11.19",
+    "path": "^0.12.7",
+    "react-bootstrap": "^1.5.2",
+    "react-router-dom": "^5.2.0",
+    "react-slick": "^0.28.1",
+    "rimraf": "^2.2.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "crud",
+    "mern",
+    "board",
+    "games"
+  ],
+  "author": "Aubrey Jones",
+  "license": "MIT"
+}

@@ -1,0 +1,455 @@
+ /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%}
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+
+
+ /* -----------------------BODY ------------------------------- */ 
+
+header, nav, main, footer {max-width: 75rem; font-family: "lato";}
+
+
+
+body{
+    font-family: $defaultFont; 
+    font-weight: $normalWeight; 
+    font-size: 16px; 
+    
+}
+
+/* ------------------------HEADER----------------------------- */
+
+
+
+div#wrappertopHeader {
+  
+}
+
+header {
+
+
+
+
+}
+
+
+
+/* ------------------------END HEADER----------------------------- */
+
+
+
+
+
+
+
+
+/* ------------------------TOPNAV----------------------------- */
+
+.nav-container {
+    width: 100%; 
+    background-color: $primaryColor; 
+    height: 50px; 
+}
+
+.menuLogo {
+    width: 50%; 
+    height: 100px; 
+}
+
+.navBar {
+    padding-top: 10px; 
+}
+
+.navLink {
+    padding: 20px; 
+    margin: 50px 20px;
+    padding-top: 50px; 
+    color: white; 
+    font-size: 24px; 
+    text-decoration: none; 
+    
+  
+}
+
+
+
+/* ------------------------MAIN----------------------------- */
+
+.main-1 {
+    
+
+
+    .gamesHeader {
+        text-align: center; 
+    
+    
+    }
+
+  
+
+
+    h1 {
+        clear: both; 
+        margin: 50px 20px 50px 30px; 
+        color: $primaryColor; 
+        text-align: left; 
+        font-size: 30px; 
+        
+        }
+        
+        h2 {
+            padding: 10px 0px; 
+            font-size: 28px; 
+        }
+        
+
+
+
+.actions {
+    display: flex;  
+    margin: 0 auto; 
+    margin-bottom: 50px; 
+    margin-left: auto; 
+}
+
+
+.MuiIconButton-root {
+    margin: 0 auto;  
+    border-radius: 0%; 
+    text-align: center; 
+}
+
+.addButton {
+    justify-content: center; 
+    background-color: $primaryColor; 
+    color: white; 
+    padding: 10px; 
+    border-radius: none; 
+    width: 200px; 
+    height: 40px; 
+   
+}
+
+.addButton:hover {
+    background-color: white; 
+    border: 1px solid $primaryColor; 
+    color: $primaryColor; 
+}
+
+.gameparentSearch {
+    display: grid; 
+    margin-bottom: 50px; 
+   
+}
+
+
+.gamestatsSearch {
+   margin: 0 auto; 
+   
+ }
+
+
+.cardstatsSearch {
+    margin: 0 auto; 
+    margin-left: 20px; 
+   
+ }
+  
+
+
+.game-container {
+    display: inline-grid;  
+    width: 300px; 
+    height: 450px; 
+    margin: 20px; 
+    box-shadow: 10px; 
+}
+
+.game-container:hover {
+    transform: translate3D(0, -1px, 0) scale(1.05)
+}
+
+.getgameLink { 
+    padding: 10px; 
+    color: $primaryColor; 
+    font-weight: bold; 
+}
+
+.getgameLink:hover {
+    text-decoration: none; 
+    background-color: $primaryColor; 
+    color: white; 
+
+}
+
+
+.gameInfoTitle {
+    padding: 10px; 
+    font-size: 24px; 
+    color: $primaryColor; 
+}
+
+
+
+.gameInfo {
+    padding: 10px; 
+}
+
+.gameInfoJP {
+    text-align: center; 
+    padding: 20px; 
+    color: $primaryColor; 
+    font-size: 20px; 
+}
+
+.iconButtons {
+    text-align: center; 
+}
+
+
+.cardInfo {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+
+        .CardMedia {
+        display: block; 
+        margin: auto; 
+        margin-top: 20px; 
+        width: 200px; 
+        height: 200px; 
+        
+        }
+        
+        
+.gameLink {
+
+}
+
+.gameLink:hover {
+    text-decoration: none; 
+}
+
+
+.popular-game-container {
+        display: flex; 
+        flex-wrap: wrap; 
+     
+      
+
+
+
+.popular-game-card {
+    width: 250px;
+    margin: 10px; 
+   
+  
+    
+
+    .GameMedia {
+        display: block; 
+        margin: auto; 
+        margin-top: 20px; 
+        width: 150px; 
+        height: 150px; 
+       
+    }
+
+
+    .gameName {
+        color: green;
+        text-align: center;  
+        font-size: 20px; 
+    }
+
+    .gamePrice {
+        text-align: center; 
+        padding: 20px; 
+        font-size: 24px; 
+    }
+
+    .gameLinkText {
+        color: $primaryColor; 
+    }
+
+    .gameLinkText:link {
+        color: $primaryColor; 
+    }
+
+    .gameLinkText:hover {
+        text-decoration: none; 
+    }
+
+
+    .icons {
+        text-align: center; 
+    }
+
+}
+
+}
+
+
+.popular-game-card:hover {
+    transform: translate3D(0, -1px, 0) scale(1.05);
+    transition: all .4s ease; 
+
+}
+
+
+
+
+.video-game-container {
+    display: flex; 
+    flex-wrap: wrap; 
+ 
+  
+
+
+
+.video-game-card {
+width: 250px;
+margin: 10px; 
+
+
+
+
+.VideoMedia {
+    display: block; 
+    margin: auto; 
+    margin-top: 20px; 
+    width: 150px; 
+    height: 150px; 
+   
+}
+
+
+.gameName {
+    color: green;
+    text-align: center;  
+    font-size: 20px; 
+}
+
+.gamePrice {
+    text-align: center; 
+    padding: 20px; 
+    font-size: 24px; 
+}
+
+
+.icons {
+    text-align: center; 
+}
+
+}
+
+}
+
+  
+.thegamesHeader {
+    text-align: left; 
+    font-weight: bolder;
+    font-size: 36px;  
+
+}
+
+
+
+
+/* ------------------------TOPNAV----------------------------- */
+
+    
+    
+   
+    
+  
+
+
+
+
+
+
+
+
+}
+
+
+
+/* ------------------------FOOTER----------------------------- */
+
+div#wrapperFooter {
+    background-color: $thirdColor;
+    z-index: 999;
+    box-shadow: 2px 2px 10px 0px #666666; 
+    height: 75px; 
+    margin-top: 100px; 
+}
+
+
+
+
+footer {
+    background-color: $thirdColor; 
+    height: 75px;   
+    margin-top: 100px;
+   
+    
+    p {  
+      color: $footerfontColor; 
+      padding: 2rem 0;     
+      font-size: .9rem;
+      text-align: center; 
+     
+      p a {
+        color: $footerfontColor;  
+         
+     } 
+
+     
+        
+    }  // end p 
+    
+   
+    
+/*    
+   
+div.apple { grid-row: 1; grid-column: 1; align-self: start; } 
+div.pear { grid-row: 2; grid-column: 1; }     
+div.banana { grid-row: 3; grid-column: 1; }  
+div.plum { grid-row: 4; grid-column: 1; }        
+    
+ */   
+    
+   
+
+
+
+
+}
+
+
+
+
+
+
+
+/* ------------------------Clearfix: Force an Element not to collapse----------------------------- */
+ 
+    .clearfix:after {
+        content: ""; 
+        display: table; 
+        
+        
+    }    
+    
+
+
+
+
+
