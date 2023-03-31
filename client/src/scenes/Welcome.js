@@ -1,5 +1,4 @@
-import React, {useState, useEffect, useCallback, useRef} from 'react';
-import Slider from "react-slick"
+import React, {useState, useEffect, useCallback} from 'react';
 import axios from 'axios'
 import _ from 'lodash'
 import {Card, IconButton, CardMedia, Typography, Container, 
@@ -8,7 +7,7 @@ import {Card, IconButton, CardMedia, Typography, Container,
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import SearchIcon from '@material-ui/icons/Search';
-import AddCircleIcon from '@material-ui/icons/Add';
+//import AddCircleIcon from '@material-ui/icons/Add';
 //import LinkIcon from '@material-ui/icons/Link';
 //import LazyLoad from 'react-lazyload'
 import '../css/cardStyles.css';
@@ -34,7 +33,7 @@ const Loading = () => (
 
  */
 
-const Welcome = (props) => {
+const Welcome = () => {
 
 const [selectedGame, setSelectedGame] = useState( { name: ''})
 const [gameData, setGameData] = useState([])
@@ -381,7 +380,7 @@ card={game.game}
         handleChange, 
         handleBlur, 
         handleSubmit, 
-        isSubmitting,
+   //     isSubmitting,
     }) => (
         <form 
         noValidate 
@@ -526,7 +525,7 @@ card={game.game}
         handleChange, 
         handleBlur, 
         handleSubmit, 
-        isSubmitting,
+    //    isSubmitting,
     }) => (
         <form 
         noValidate 
