@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css';
-import Welcome from './Welcome'
-import PopularGames from './PopularGames'
-import TopNavigation from './TopNavigation'
+import Welcome from './scenes/Welcome'
+import PopularGames from './scenes/PopularGames'; 
+import TopNavigation from "./components/TopNavigation"; 
 //import { CSSTransition } from 'react-transition-group'
 
 
