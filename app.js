@@ -10,17 +10,19 @@ import mongoose from 'mongoose'
 import * as dotenv from 'dotenv'
 import cors from 'cors'
 
+dotenv.config()
 
+const app = express()
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname)
+const __filename = fileURLToPath(import.meta.url); 
+const __dirname = path.dirname(__filename); 
 
 mongoose.set('useFindAndModify', false)
 
-dotenv.config()
+
 
 const port = process.env.PORT || 8080
 
-const app = express()
 
 app.use(cors())
 
@@ -34,6 +36,14 @@ app.use(compression())
 
 app.use(express.static('public'))
 
+// lets just forget about CORS
+
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH' ]
+}));
+
+
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*")
@@ -43,8 +53,14 @@ app.use((req, res, next) => {
 })
 
 
-//app.use(express.static(path.resolve(__dirname, 'client/build')))
+// connect server to client for production
 
+if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
+	app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname + '/client/build/index.html'));
+    });
+}
 app.use('/api', apiRouter)
 
 app.use('/populargame', populargameRouter)
