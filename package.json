@@ -22,7 +22,6 @@
     "path": "^0.12.7",
     "react-bootstrap": "^1.5.2",
     "react-router-dom": "^5.2.0",
-    "react-slick": "^0.28.1",
     "rimraf": "^2.2.8"
   },
   "devDependencies": {},
