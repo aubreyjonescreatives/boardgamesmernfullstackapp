@@ -1,7 +1,10 @@
 import express from "express"; 
 import path from 'path'
 import helmet from 'helmet'
+import multer from "multer"; 
+import morgan from "morgan";
 import compression from 'compression'
+import { fileURLToPath } from "url";
 //import bodyParser from 'body-parser'
 import { apiRouter} from './routes/api.route.js'
 import { crazygameRouter} from './routes/crazygame.route.js'
@@ -17,11 +20,11 @@ const app = express()
 const __filename = fileURLToPath(import.meta.url); 
 const __dirname = path.dirname(__filename); 
 
-mongoose.set('useFindAndModify', false)
 
 
 
-const port = process.env.PORT || 8080
+
+//const port = process.env.PORT || 8080
 
 
 app.use(cors())
@@ -34,7 +37,6 @@ app.use(helmet())
 
 app.use(compression())
 
-app.use(express.static('public'))
 
 // lets just forget about CORS
 
@@ -71,19 +73,15 @@ app.use((req, res, next) => {
     res.status(404).send('<h1>Page Not Found</h1>')
 })
 
-const main = async () => {
-    await mongoose.connect(`${process.env.DB_CONN_STRING}`, 
-    {
-        useNewUrlParser: true, 
-        useUnifiedTopology: true,
-    })
+const PORT = process.env.PORT || 8080
 
+mongoose.set('strictQuery', false)
 
-    
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+mongoose.connect(process.env.DB_CONN_STRING, {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true, 
+}).then(() => {
+    app.listen(PORT, () => console.log(`Server Started: ${PORT}`)); 
+ 
+}).catch((error) => console.log(`${error} uh oh. That didn't work.`));
 
-}
-
-main()
