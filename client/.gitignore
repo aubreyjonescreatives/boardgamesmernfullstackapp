@@ -24,7 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 #environment variables
-.env
 ./graphql/ node_modules
 ./graphql/prisma /.env
 
