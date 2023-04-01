@@ -26,7 +26,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "npm install && node index.js",
+    "start": "npm install && node app.js",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "seed": "node seed/loadAPI.js",
     "seed:crazygames": "node seed/loadAPICrazy.js",
