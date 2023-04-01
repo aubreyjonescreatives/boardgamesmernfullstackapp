@@ -3,11 +3,11 @@ import axios from 'axios'
 import _ from 'lodash'
 import {Card, IconButton, CardMedia, Typography, Container, 
     Dialog, Button, DialogTitle, DialogContent, DialogContentText, 
-    DialogActions, TextField, Box, CardContent, Link} from '@material-ui/core'
-import DeleteIcon from '@material-ui/icons/Delete';
-import EditIcon from '@material-ui/icons/Edit';
-import SearchIcon from '@material-ui/icons/Search';
-import AddCircleIcon from '@material-ui/icons/Add';
+    DialogActions, TextField, Box, CardContent, Link} from '@mui/material'
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import SearchIcon from '@mui/icons-material/Search';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 //import LinkIcon from '@material-ui/icons/Link';
 //import LazyLoad from 'react-lazyload'
 import '../css/cardStyles.css';
